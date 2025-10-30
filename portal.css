@@ -1,0 +1,710 @@
+/*Yronhii tohirgoo*/
+* {
+    margin: 0;
+    padding: 0;
+    /*Dotr talyn zai*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    /*Font*/
+    background-color: #0d0d0e;
+    color: #ffffff;
+    line-height: 1.6;
+    /*Muriin hemjee*/
+}
+
+.container {
+    max-width: 1400px;
+    /*hyzgaarlsan*/
+    margin: 0 auto;
+    padding: 0 20px;
+    /*Dotr talyn zai*/
+}
+
+.header {
+    background-color: #0d0d0e;
+    padding: 20px 0;
+    /*Dotr talyn zai*/
+    position: sticky;
+    /*Hudulguuntei gehde todorhoi zaagt hurehed togtmol bairldag*/
+    top: 0;
+    /*Deed tal*/
+    z-index: 100;
+    /*Dawhtsah bairlalyn index*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /*Dood tal*/
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    /*hoorondoh zai*/
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    /*texted shugam effect nemeh*/
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    /*animate shiljiltyg todorhoilson*/
+}
+
+.nav-menu a:hover {
+    opacity: 0.7;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 15px;
+    /*hoorondoh zai*/
+    align-items: center;
+}
+
+.auth-btn {
+    background-color: #ffffff;
+    color: #0d0d0e;
+    border: none;
+    padding: 12px 24px;
+    /*Dotr talyn zai*/
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /*mouse irehed soligdono*/
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /*hoorondoh zai*/
+    transition: transform 0.2s;
+    /*animate shiljiltyg todorhoilson*/
+}
+
+.auth-btn:hover {
+    transform: scale(1.05);
+    /*tegsh hemiin huwirgalt*/
+    /*scale ni tomsgoh bagasgah*/
+}
+
+.lang-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 16px;
+    /*Dotr talyn zai*/
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /*mouse irehed soligdono*/
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /*hoorondoh zai*/
+    transition: background-color 0.3s;
+     /*animate shiljiltyg todorhoilson*/
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-carousel {
+    position: relative;
+    /*anhni bairlalaas baga zereg shiljuuleh*/
+    padding: 40px 0;
+    /*Dotr talyn zai*/
+    overflow: hidden;
+    /*kontentyn dawhardlyg nuuna*/
+}
+
+.carousel-container {
+    max-width: 1200px;
+    /*hyzgaarlsan*/
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    /*kontentyn dawhardlyg nuuna*/
+    position: relative;
+    /*anhni bairlalaas baga zereg shiljuuleh*/
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    /*hoorondoh zai*/
+    margin-top: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    /*mouse irehed soligdono*/
+    transition: background-color 0.3s;
+    /*animate shiljiltyg todorhoilson*/
+
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+
+.floating-ghost {
+    position: absolute;
+    /*todorhoi bairlalaar zaagdaj hudulnu*/
+    width: 60px;
+    height: 60px;
+    animation: float 3s ease-in-out infinite;
+    /*animate effect uusgeh*/
+}
+
+.ghost-1 {
+    top: 10%;
+    right: 15%;
+    animation-delay: 0s;
+    /*animate ehleh hugatsaag hoishluulah*/
+}
+
+.ghost-2 {
+    top: 50%;
+    left: 10%;
+    animation-delay: 1.5s;
+    /*animate ehleh hugatsaag hoishluulah*/
+}
+
+.events-section {
+    padding: 60px 0;
+    /*Dotr talyn zai*/
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.events-grid {
+    display: grid;
+    /*grid bairlalaar bairluulah*/
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /*hawtgai bagana uusgeh zaalt*/
+    gap: 24px;
+    /*hoorondoh zai*/
+}
+
+.event-card {
+    background-color: #1a1a1c;
+    border-radius: 16px;
+    overflow: hidden;
+    /*kontentyn dawhardlyg nuuna*/
+    cursor: pointer;
+    /*mouse irehed soligdono*/
+    transition: transform 0.3s, box-shadow 0.3s;
+    /*animate shiljiltyg todorhoilson*/
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    /*tegsh hemiin huwirgalt*/
+    /*translateY ni - bol doosh*/
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.event-card.featured {
+    grid-column: span 2;
+    /*heden bagana damjihyg zaana*/
+}
+
+.event-image {
+    position: relative;
+    /*anhni bairlalaas baga zereg shiljuuleh*/
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    /*kontentyn dawhardlyg nuuna*/
+}
+
+.event-image img {
+    position: absolute;
+    /*todorhoi bairlalaar zaagdaj hudulnu*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-date {
+    position: absolute;
+    /*todorhoi bairlalaar zaagdaj hudulnu*/
+    top: 16px;
+    /*Deed tal*/
+    right: 16px;
+    background-color: #ffffff;
+    color: #0d0d0e;
+    padding: 12px 16px;
+    /*Dotr talyn zai*/
+    border-radius: 12px;
+    text-align: center;
+    /*text tuwd bairluulah*/
+    font-weight: 700;
+}
+
+.date-day {
+    display: block;
+    font-size: 24px;
+    line-height: 1;
+    /*Muriin hemjee*/
+}
+
+.date-month {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.event-title {
+    padding: 20px;
+    /*Dotr talyn zai*/
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.merchandise-section {
+    padding: 60px 0;
+    /*Dotr talyn zai*/
+    background-color: #0a0a0b;
+}
+
+.merch-filters {
+    display: flex;
+    gap: 12px;
+    /*hoorondoh zai*/
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 24px;
+    /*Dotr talyn zai*/
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #ffffff;
+    color: #0d0d0e;
+    border-color: #ffffff;
+}
+
+.merch-carousel {
+    position: relative;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    /*hoorondoh zai*/
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10;
+    /*Dawhtsah bairlalyn index*/
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-arrow.prev {
+    left: -24px;
+}
+
+.carousel-arrow.next {
+    right: -24px;
+}
+
+.merch-card {
+    background-color: #1a1a1c;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.merch-card:hover {
+    transform: scale(1.05);
+}
+
+.merch-image {
+    width: 100%;
+    padding-top: 100%;
+    /*Dotr deed talyn zai*/
+    position: relative;
+    background-color: #2a2a2c;
+}
+
+.merch-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.merch-title {
+    padding: 16px 16px 4px;
+    /*Dotr talyn zai*/
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.merch-category {
+    padding: 0 16px;
+    /*Dotr talyn zai*/
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.merch-price {
+    padding: 8px 16px 16px;
+    /*Dotr talyn zai*/
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.highlights-section {
+    padding: 60px 0;
+    /*Dotr talyn zai*/
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    /*hoorondoh zai*/
+}
+
+.highlight-card {
+    background-color: #1a1a1c;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+}
+
+.highlight-card.large {
+    grid-column: span 2;
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.highlight-content {
+    padding: 24px;
+    /*Dotr talyn zai*/
+}
+
+.highlight-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.highlight-content p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.partners-section {
+    padding: 60px 0;
+    /*Dotr talyn zai*/
+    background-color: #0a0a0b;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    /*hoorondoh zai*/
+    flex-wrap: wrap;
+}
+
+.partners-grid img {
+    height: 40px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.partners-grid img:hover {
+    opacity: 1;
+}
+
+.contact-section {
+    padding: 80px 0;
+    /*Dotr talyn zai*/
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    /*hoorondoh zai*/
+    background-color: #1a1a1c;
+    border-radius: 24px;
+    padding: 60px;
+    /*Dotr talyn zai*/
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*hoorondoh zai*/
+}
+
+.logo-gradient {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.logo-gradient img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /*hoorondoh zai*/
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /*hoorondoh zai*/
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #0d0d0e;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    /*Dotr talyn zai*/
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.phone-input {
+    display: flex;
+    gap: 12px;
+    /*hoorondoh zai*/
+    align-items: center;
+}
+
+.country-code {
+    background-color: #0d0d0e;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    /*Dotr talyn zai*/
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+.submit-btn {
+    background-color: #ffffff;
+    color: #0d0d0e;
+    border: none;
+    padding: 16px 32px;
+    /*Dotr talyn zai*/
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+}
+
+.footer {
+    background-color: #0a0a0b;
+    padding: 60px 0 20px;
+    /*Dotr talyn zai*/
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    /*hoorondoh zai*/
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    /*hoorondoh zai*/
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+}
+
+.app-badges {
+    display: flex;
+    gap: 12px;
+    /*hoorondoh zai*/
+}
+
+.app-badges img {
+    height: 40px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    /*Dotr deed talyn zai*/
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
